@@ -184,6 +184,11 @@ int main() {
 | Access | All members independently | Only one at a time |
 | Data Loss | No data loss | Overwriting occurs |
 
+## Magic things you can do with union
+- bit manipulation on floating point numbers (for complex mathematical operations optimizations with floats)
+- Loop on struct members as if they are an array
+- Create a "seemingly" non homogenoues array or list of elements.
+
 ## Use Cases
 - Embedded systems with limited memory
 - Hardware register mapping

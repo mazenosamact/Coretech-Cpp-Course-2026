@@ -259,3 +259,65 @@ int main() {
     return 0;
 }
 ```
+
+---
+
+## Exercise 4: CSV Parsing (Data Import/Export)
+**Context:** Parse CSV files split by comma delimiters.
+
+**Problem:**
+```cpp
+// Create a simple CSV line parser:
+// 1. Split CSV line by commas
+// 2. Pair fields with headers
+// 3. Print formatted output to stdout
+```
+
+**Solution:**
+```cpp
+#include <iostream>
+#include <string>
+using namespace std;
+
+void parseCSVLine(const string &headers, const string &data) {
+    size_t h_pos = 0, d_pos = 0;
+    
+    while (h_pos < headers.length() && d_pos < data.length()) {
+        // Find next comma in headers
+        size_t h_comma = headers.find(',', h_pos);
+        if (h_comma == string::npos) h_comma = headers.length();
+        
+        // Find next comma in data
+        size_t d_comma = data.find(',', d_pos);
+        if (d_comma == string::npos) d_comma = data.length();
+        
+        // Extract header and data field
+        string header = headers.substr(h_pos, h_comma - h_pos);
+        string value = data.substr(d_pos, d_comma - d_pos);
+        
+        // Print formatted output
+        cout << header << ": " << value << endl;
+        
+        // Move to next field
+        h_pos = h_comma + 1;
+        d_pos = d_comma + 1;
+    }
+}
+
+int main() {
+    cout << "=== CSV Parsing ===" << endl;
+    
+    string headers = "Name,Email,City,Salary";
+    
+    cout << "\nRecord 1:" << endl;
+    parseCSVLine(headers, "John Smith,john@example.com,New York,75000");
+    
+    cout << "\nRecord 2:" << endl;
+    parseCSVLine(headers, "Jane Doe,jane@example.com,Los Angeles,82000");
+    
+    cout << "\nRecord 3:" << endl;
+    parseCSVLine(headers, "Alice Johnson,alice@example.com,Chicago,95000");
+    
+    return 0;
+}
+```
