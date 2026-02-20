@@ -1,8 +1,8 @@
-// #include "print_bin.h"
-#include "union_test.h"
+#include "test-enum-enum-class.h"
+
+
 int main(void)
 {
-    // test_print_bin(); 
-    test_union_main();
+    test_enum_enumclass_main();
     return 0;
 }

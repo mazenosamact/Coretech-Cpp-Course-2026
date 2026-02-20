@@ -1,0 +1,4 @@
+key: parity ,value: even
+key: baudrate ,value: 19200
+key: slaveaddress ,value: 50
+key: stopbits ,value: 1
