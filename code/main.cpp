@@ -8,7 +8,8 @@
 // #include "test-enum-enum-class.h"
 // #include "test-static-keyword.h"
 // #include "test-ppm-output.h"
-#include "test-streams.h"
+// #include "test-streams.h"
+#include "test-vectors.h"
 
 int main(int argc, char* argv[]) {
 
@@ -22,7 +23,8 @@ int main(int argc, char* argv[]) {
     // test_enum_enumclass_main();
     // test_static_keyword();
     // test_ppm_output_main();
-    test_streams_main(argc,argv);
+    // test_streams_main(argc,argv);
+    test_vectors_main(argc,argv);
 
     return 0;
 }
