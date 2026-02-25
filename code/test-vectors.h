@@ -4,6 +4,7 @@
 #include <vector>
 #include <algorithm>
 #include <sstream>
+// #include <format>
 using namespace std;
 
 int acc(int sum, int next)
@@ -11,7 +12,28 @@ int acc(int sum, int next)
     return (sum+next);
 }
 
+class Point
+{
+public:
+    Point(int x, int y, int z):_x(x),_y(y),_z(z)
+    {
+        // std::println("created point with ({},{},{})", x,y,z);
+        cout << "created point (" <<
+        x << ","  <<
+        y << ","  <<
+        z << ","  <<
+        ")" << endl;
+    }
 
+    Point(const Point& p)
+    {
+        cout << "copied point" << endl;
+        _x = p._x;
+        
+    }
+
+    int _x,_y,_z ;
+};
 
 
 
@@ -152,7 +174,7 @@ int test_vectors_main(int argc, char* argv[])
 
 #endif
 
-#define VECTORS_3 1
+#define VECTORS_3 0
 #if VECTORS_3 // difference between size and capacity
 
     vector<int> v;
@@ -186,7 +208,7 @@ int test_vectors_main(int argc, char* argv[])
     // KEY DIFFERENCE:
     // size()     = number of elements currently stored
     // capacity() = total allocated memory (in number of elements)
-#if 1
+#if 0
     // PITFALL: Vector relocation and dangling pointers
     cout << "\nVector Relocation Pitfall Demo:" << endl;
     vector<int> nums;
@@ -284,7 +306,7 @@ int test_vectors_main(int argc, char* argv[])
 #endif
 
 
-#define VECTORS_5 1
+#define VECTORS_5 0
 #if VECTORS_5 // Common vector pitfalls
 
     cout << "\n=== VECTOR PITFALLS ===" << endl;
@@ -554,4 +576,9 @@ int test_vectors_main(int argc, char* argv[])
 
 #endif
 
+    vector<Point> points ;
+    Point p(1,2,3);
+    points.push_back(p);
+
+    points.emplace_back(4,5,6);
 }

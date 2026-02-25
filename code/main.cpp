@@ -9,7 +9,11 @@
 // #include "test-static-keyword.h"
 // #include "test-ppm-output.h"
 // #include "test-streams.h"
-#include "test-vectors.h"
+// #include "test-vectors.h"
+// #include "test-stack.h"
+// #include "test-map.h"
+// #include "test-tuple.h"
+#include "test-algorithms.h"
 
 int main(int argc, char* argv[]) {
 
@@ -24,7 +28,11 @@ int main(int argc, char* argv[]) {
     // test_static_keyword();
     // test_ppm_output_main();
     // test_streams_main(argc,argv);
-    test_vectors_main(argc,argv);
+    // test_vectors_main(argc,argv);
+    // test_stack_main(argc,argv);
+    // test_map_main(argc,argv);
+    // test_tuple_main(argc, argv);
+    test_algorithm();
 
     return 0;
 }
