@@ -13,7 +13,9 @@
 // #include "test-stack.h"
 // #include "test-map.h"
 // #include "test-tuple.h"
-#include "test-algorithms.h"
+// #include "test-algorithms.h"
+// #include "test-generics.h"
+#include "test-inheritance.h"
 
 int main(int argc, char* argv[]) {
 
@@ -32,7 +34,9 @@ int main(int argc, char* argv[]) {
     // test_stack_main(argc,argv);
     // test_map_main(argc,argv);
     // test_tuple_main(argc, argv);
-    test_algorithm();
+    // test_algorithm();
+    // test_generics_main();
+    test_inheritance_main();
 
     return 0;
 }
