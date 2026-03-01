@@ -89,7 +89,7 @@
 8. Error handling techniques:
    1. Assertions and design by contract
    2. static assertions and compile time type safety (Templates std::enable_if)
-   3. Error codes
+   3. using Error codes (enums) and `errno` in C
    4. Exceptions
    5. std::optional (C++17)
    6. std::expected (C++23)
