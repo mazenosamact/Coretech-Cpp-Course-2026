@@ -110,7 +110,7 @@
     3. Behavioral: Observer
     4. Creational: Factory
     5. Creational: builder
-    6. Structural: Singleton
+    6. Creational: Singleton
     7. Structural: proxy
     8. Concurrent:
        1. Actor
